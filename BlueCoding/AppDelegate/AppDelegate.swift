@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DataPlatform
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let moviesRouter = DefaultMoviesRouter(navigationController: navigationController, storyboard: storyboard)
+        let dataUseCaseProvider = DataPlatform.UseCaseProvider()
+        let moviesRouter = DefaultMoviesRouter(services: dataUseCaseProvider, navigationController: navigationController, storyboard: storyboard)
         moviesRouter.toMovies()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

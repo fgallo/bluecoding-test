@@ -14,18 +14,21 @@ protocol MoviesRouter {
 }
 
 class DefaultMoviesRouter: MoviesRouter {
+    private let services: UseCaseProvider
     private let navigationController: UINavigationController
     private let storyboard: UIStoryboard
     
-    init(navigationController: UINavigationController,
+    init(services: UseCaseProvider,
+         navigationController: UINavigationController,
          storyboard: UIStoryboard) {
+        self.services = services
         self.navigationController = navigationController
         self.storyboard = storyboard
     }
     
     func toMovies() {
         let moviesViewController = storyboard.instantiateViewController(withIdentifier: "MoviesViewController") as! MoviesViewController
-        moviesViewController.viewModel = MoviesViewModel()
+        moviesViewController.viewModel = MoviesViewModel(useCase: services.makeMoviesUseCase(), router: self)
         navigationController.pushViewController(moviesViewController, animated: true)
     }
     
