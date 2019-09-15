@@ -11,12 +11,12 @@ import Domain
 
 struct MovieCellViewModel {
     let title: String
-    let rating: Int
+    let rating: String
     let posterURL: URL?
     
     init(movie: Movie) {
         self.title = movie.title
-        self.rating = movie.rating
+        self.rating = "\(movie.rating)/10"
         self.posterURL = URL(string: movie.posterPath ?? "")
     }
 }
