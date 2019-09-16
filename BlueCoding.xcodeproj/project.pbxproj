@@ -45,6 +45,15 @@
 		A2AE9FD3232EFFF500B4B82D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD2232EFFF500B4B82D /* Network.swift */; };
 		A2AE9FD5232F002A00B4B82D /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */; };
 		A2AE9FD8232F009D00B4B82D /* MoviesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */; };
+		A2AE9FDE232F27AB00B4B82D /* MoviesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FDD232F27AB00B4B82D /* MoviesDatabase.swift */; };
+		A2AE9FE1232F288100B4B82D /* RMMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FE0232F288100B4B82D /* RMMovie.swift */; };
+		A2AE9FE4232F2D7400B4B82D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FE3232F2D7400B4B82D /* Database.swift */; };
+		A2AE9FE7232F2DBF00B4B82D /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FE6232F2DBF00B4B82D /* RealmRepresentable.swift */; };
+		A2AE9FE9232F2DCA00B4B82D /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FE8232F2DCA00B4B82D /* DomainConvertibleType.swift */; };
+		A2AE9FEB232F2E5000B4B82D /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FEA232F2E5000B4B82D /* RunLoopThreadScheduler.swift */; };
+		A2AE9FED232F2EA800B4B82D /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FEC232F2EA800B4B82D /* Observable+Ext.swift */; };
+		A2AE9FEF232F2F0800B4B82D /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FEE232F2F0800B4B82D /* Realm+Ext.swift */; };
+		A2AE9FF3232FD90500B4B82D /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FF2232FD90500B4B82D /* DatabaseProvider.swift */; };
 		D8822A2135F187D9129575FA /* Pods_DataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC0113652BD400095D98616 /* Pods_DataPlatform.framework */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +176,15 @@
 		A2AE9FD2232EFFF500B4B82D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNetwork.swift; sourceTree = "<group>"; };
+		A2AE9FDD232F27AB00B4B82D /* MoviesDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDatabase.swift; sourceTree = "<group>"; };
+		A2AE9FE0232F288100B4B82D /* RMMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMMovie.swift; sourceTree = "<group>"; };
+		A2AE9FE3232F2D7400B4B82D /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		A2AE9FE6232F2DBF00B4B82D /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		A2AE9FE8232F2DCA00B4B82D /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		A2AE9FEA232F2E5000B4B82D /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		A2AE9FEC232F2EA800B4B82D /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		A2AE9FEE232F2F0800B4B82D /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		A2AE9FF2232FD90500B4B82D /* DatabaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
 		C0D4ECAFDF17FC71765B5368 /* Pods-BlueCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueCoding/Pods-BlueCoding.release.xcconfig"; sourceTree = "<group>"; };
 		CE6EF1D845BCE5967869C3FE /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90112B76BB6B5A6D8144895 /* Pods-DataPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DataPlatformTests/Pods-DataPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -306,7 +324,9 @@
 		A2AE9F86232EEF3D00B4B82D /* DataPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				A2AE9FD6232F009600B4B82D /* API */,
+				A2AE9FE2232F2D6300B4B82D /* Realm */,
+				A2AE9FDF232F287400B4B82D /* Entities */,
+				A2AE9FDC232F278B00B4B82D /* Database */,
 				A2AE9FD1232EFFDB00B4B82D /* Network */,
 				A2AE9FA9232EEFAB00B4B82D /* Repositories */,
 				A2AE9FA8232EEFA400B4B82D /* UseCases */,
@@ -410,16 +430,55 @@
 			children = (
 				A2AE9FD2232EFFF500B4B82D /* Network.swift */,
 				A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */,
+				A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		A2AE9FD6232F009600B4B82D /* API */ = {
+		A2AE9FDC232F278B00B4B82D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */,
+				A2AE9FE3232F2D7400B4B82D /* Database.swift */,
+				A2AE9FF2232FD90500B4B82D /* DatabaseProvider.swift */,
+				A2AE9FDD232F27AB00B4B82D /* MoviesDatabase.swift */,
 			);
-			path = API;
+			path = Database;
+			sourceTree = "<group>";
+		};
+		A2AE9FDF232F287400B4B82D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FE0232F288100B4B82D /* RMMovie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A2AE9FE2232F2D6300B4B82D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FF4232FE05B00B4B82D /* Extensions */,
+				A2AE9FE5232F2DB000B4B82D /* Convertion */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A2AE9FE5232F2DB000B4B82D /* Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FE8232F2DCA00B4B82D /* DomainConvertibleType.swift */,
+				A2AE9FE6232F2DBF00B4B82D /* RealmRepresentable.swift */,
+				A2AE9FEA232F2E5000B4B82D /* RunLoopThreadScheduler.swift */,
+			);
+			path = Convertion;
+			sourceTree = "<group>";
+		};
+		A2AE9FF4232FE05B00B4B82D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FEC232F2EA800B4B82D /* Observable+Ext.swift */,
+				A2AE9FEE232F2F0800B4B82D /* Realm+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DFEFA1332047323EFA081B7F /* Pods */ = {
@@ -740,7 +799,10 @@
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -750,7 +812,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -834,7 +899,10 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DataPlatformTests/Pods-DataPlatformTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -842,7 +910,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -965,9 +1036,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AE9FEB232F2E5000B4B82D /* RunLoopThreadScheduler.swift in Sources */,
 				A2AE9FC4232EF3BB00B4B82D /* UseCaseProvider.swift in Sources */,
+				A2AE9FE1232F288100B4B82D /* RMMovie.swift in Sources */,
+				A2AE9FF3232FD90500B4B82D /* DatabaseProvider.swift in Sources */,
 				A2AE9FD5232F002A00B4B82D /* NetworkProvider.swift in Sources */,
+				A2AE9FED232F2EA800B4B82D /* Observable+Ext.swift in Sources */,
+				A2AE9FE9232F2DCA00B4B82D /* DomainConvertibleType.swift in Sources */,
+				A2AE9FE4232F2D7400B4B82D /* Database.swift in Sources */,
 				A2AE9FC2232EF3A700B4B82D /* MoviesDataRepository.swift in Sources */,
+				A2AE9FEF232F2F0800B4B82D /* Realm+Ext.swift in Sources */,
+				A2AE9FDE232F27AB00B4B82D /* MoviesDatabase.swift in Sources */,
+				A2AE9FE7232F2DBF00B4B82D /* RealmRepresentable.swift in Sources */,
 				A2AE9FD8232F009D00B4B82D /* MoviesNetwork.swift in Sources */,
 				A2AE9FD3232EFFF500B4B82D /* Network.swift in Sources */,
 			);

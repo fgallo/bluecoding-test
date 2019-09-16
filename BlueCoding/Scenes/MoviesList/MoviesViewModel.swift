@@ -40,9 +40,6 @@ class MoviesViewModel: ViewModelType {
                 .trackActivity(activityIndicator)
                 .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()
-                .map({ response -> [Movie] in
-                    return response.movies
-                })
                 .map { $0.map { MovieCellViewModel(movie: $0) } }
         }
         

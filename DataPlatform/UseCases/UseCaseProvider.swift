@@ -8,16 +8,20 @@
 
 import Foundation
 import Domain
+import Realm
+import RealmSwift
 
 public final class UseCaseProvider: Domain.UseCaseProvider {
     private let networkProvider: NetworkProvider
+    private let databaseProvider: DatabaseProvider
     
     public init() {
+        databaseProvider = DatabaseProvider()
         networkProvider = NetworkProvider()
     }
 
     public func makeMoviesUseCase() -> Domain.MoviesUseCase {
-        return MoviesDataRepository(network: networkProvider.makeMoviesNetwork())
+        return MoviesDataRepository(database: databaseProvider.makeMoviesDatabase(), network: networkProvider.makeMoviesNetwork())
     }
     
 }

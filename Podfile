@@ -23,6 +23,7 @@ target 'DataPlatform' do
   use_frameworks!
   rx_swift
   pod 'RxAlamofire'
+  pod 'RxRealm'
 
   target 'DataPlatformTests' do
     inherit! :search_paths

@@ -13,6 +13,16 @@ public struct MovieResponse {
     public let page: Int
     public let totalPages: Int
     public let totalMovies: Int
+    
+    public init(movies: [Movie],
+                page: Int,
+                totalPages: Int,
+                totalMovies: Int) {
+        self.movies = movies
+        self.page = page
+        self.totalPages = totalPages
+        self.totalMovies = totalMovies
+    }
 }
 
 extension MovieResponse: Decodable {
@@ -35,5 +45,15 @@ public struct Movie: Decodable {
         case title
         case posterPath = "poster_path"
         case rating = "vote_average"
+    }
+    
+    public init(id: Int,
+                title: String,
+                posterPath: String?,
+                rating: Double) {
+        self.id = id
+        self.title = title
+        self.posterPath = posterPath
+        self.rating = rating
     }
 }
