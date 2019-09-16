@@ -12,6 +12,7 @@ import RealmSwift
 final class RMMovie: Object {
     @objc dynamic var id: Int = 0
     @objc dynamic var title: String = ""
+    @objc dynamic var overview: String = ""
     @objc dynamic var posterPath: String = ""
     @objc dynamic var rating: Double = 0.0
     
@@ -24,6 +25,7 @@ extension RMMovie: DomainConvertibleType {
     func asDomain() -> Movie {
         return Movie(id: id,
                      title: title,
+                     overview: overview,
                      posterPath: posterPath,
                      rating: rating)
     }
@@ -34,6 +36,7 @@ extension Movie: RealmRepresentable {
         return RMMovie.build { object in
             object.id = id
             object.title = title
+            object.overview = overview
             object.posterPath = posterPath ?? ""
             object.rating = rating
         }

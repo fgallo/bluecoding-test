@@ -15,11 +15,13 @@ class MoviesViewModel: ViewModelType {
     
     struct Input {
         let trigger: Driver<Void>
+        let selection: Driver<IndexPath>
     }
     
     struct Output {
         let fetching: Driver<Bool>
         let movies: Driver<[MovieCellViewModel]>
+        let selectedMovie: Driver<Movie>
         let error: Driver<Error>
     }
     
@@ -45,8 +47,16 @@ class MoviesViewModel: ViewModelType {
         
         let fetching = activityIndicator.asDriver()
         let error = errorTracker.asDriver()
+        let selectedMovie = input.selection
+            .withLatestFrom(movies) { (indexPath, movies) -> Movie in
+                return movies[indexPath.row].movie
+            }
+            .do(onNext: router.toMovieDetails)
         
-        return Output(fetching: fetching, movies: movies, error: error)
+        return Output(fetching: fetching,
+                      movies: movies,
+                      selectedMovie: selectedMovie,
+                      error: error)
     }
     
 }

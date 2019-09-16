@@ -37,22 +37,26 @@ extension MovieResponse: Decodable {
 public struct Movie: Decodable {
     public let id: Int
     public let title: String
+    public let overview: String
     public let posterPath: String?
     public let rating: Double
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
+        case overview
         case posterPath = "poster_path"
         case rating = "vote_average"
     }
     
     public init(id: Int,
                 title: String,
+                overview: String,
                 posterPath: String?,
                 rating: Double) {
         self.id = id
         self.title = title
+        self.overview = overview
         self.posterPath = posterPath
         self.rating = rating
     }

@@ -39,7 +39,8 @@ class MoviesViewController: UIViewController {
             .controlEvent(.valueChanged)
             .asDriver()
         
-        let input = MoviesViewModel.Input(trigger: Driver.merge(viewWillAppear, pull))
+        let input = MoviesViewModel.Input(trigger: Driver.merge(viewWillAppear, pull),
+                                          selection: collectionView.rx.itemSelected.asDriver())
         let output = viewModel.transform(input: input)
         
         output.movies.drive(collectionView.rx.items(cellIdentifier: MovieCollectionViewCell.cellIdentifier,
@@ -49,6 +50,9 @@ class MoviesViewController: UIViewController {
         
         output.fetching
             .drive(collectionView.refreshControl!.rx.isRefreshing)
+            .disposed(by: disposeBag)
+        output.selectedMovie
+            .drive()
             .disposed(by: disposeBag)
     }
     

@@ -11,6 +11,7 @@ import Domain
 
 protocol MoviesRouter {
     func toMovies()
+    func toMovieDetails(_ movie: Movie)
 }
 
 class DefaultMoviesRouter: MoviesRouter {
@@ -31,6 +32,13 @@ class DefaultMoviesRouter: MoviesRouter {
         moviesViewController.title = "Movies"
         moviesViewController.viewModel = MoviesViewModel(useCase: services.makeMoviesUseCase(), router: self)
         navigationController.pushViewController(moviesViewController, animated: true)
+    }
+    
+    func toMovieDetails(_ movie: Movie) {
+        let movieDetailsRouter = DefaultMovieDetailsRouter(navigationController: navigationController)
+        let movieDetailsViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        movieDetailsViewController.viewModel = MovieDetailsViewModel(movie: movie, router: movieDetailsRouter)
+        navigationController.pushViewController(movieDetailsViewController, animated: true)
     }
     
 }
