@@ -42,6 +42,9 @@
 		A2AE9FC4232EF3BB00B4B82D /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FC3232EF3BB00B4B82D /* UseCaseProvider.swift */; };
 		A2AE9FCF232EF9BB00B4B82D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FCD232EF9BB00B4B82D /* MovieCollectionViewCell.swift */; };
 		A2AE9FD0232EF9BB00B4B82D /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2AE9FCE232EF9BB00B4B82D /* MovieCollectionViewCell.xib */; };
+		A2AE9FD3232EFFF500B4B82D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD2232EFFF500B4B82D /* Network.swift */; };
+		A2AE9FD5232F002A00B4B82D /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */; };
+		A2AE9FD8232F009D00B4B82D /* MoviesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */; };
 		D8822A2135F187D9129575FA /* Pods_DataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC0113652BD400095D98616 /* Pods_DataPlatform.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +164,9 @@
 		A2AE9FC3232EF3BB00B4B82D /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		A2AE9FCD232EF9BB00B4B82D /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2AE9FCE232EF9BB00B4B82D /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		A2AE9FD2232EFFF500B4B82D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNetwork.swift; sourceTree = "<group>"; };
 		C0D4ECAFDF17FC71765B5368 /* Pods-BlueCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCoding.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueCoding/Pods-BlueCoding.release.xcconfig"; sourceTree = "<group>"; };
 		CE6EF1D845BCE5967869C3FE /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90112B76BB6B5A6D8144895 /* Pods-DataPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DataPlatformTests/Pods-DataPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 		A2AE9F86232EEF3D00B4B82D /* DataPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE9FD6232F009600B4B82D /* API */,
+				A2AE9FD1232EFFDB00B4B82D /* Network */,
 				A2AE9FA9232EEFAB00B4B82D /* Repositories */,
 				A2AE9FA8232EEFA400B4B82D /* UseCases */,
 				A2AE9F87232EEF3D00B4B82D /* DataPlatform.h */,
@@ -395,6 +403,23 @@
 				A2AE9FB9232EF2D100B4B82D /* MovieCellViewModel.swift */,
 			);
 			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		A2AE9FD1232EFFDB00B4B82D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FD2232EFFF500B4B82D /* Network.swift */,
+				A2AE9FD4232F002A00B4B82D /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A2AE9FD6232F009600B4B82D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE9FD7232F009D00B4B82D /* MoviesNetwork.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		DFEFA1332047323EFA081B7F /* Pods */ = {
@@ -941,7 +966,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AE9FC4232EF3BB00B4B82D /* UseCaseProvider.swift in Sources */,
+				A2AE9FD5232F002A00B4B82D /* NetworkProvider.swift in Sources */,
 				A2AE9FC2232EF3A700B4B82D /* MoviesDataRepository.swift in Sources */,
+				A2AE9FD8232F009D00B4B82D /* MoviesNetwork.swift in Sources */,
+				A2AE9FD3232EFFF500B4B82D /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

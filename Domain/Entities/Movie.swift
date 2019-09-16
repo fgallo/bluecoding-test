@@ -9,10 +9,10 @@
 import Foundation
 
 public struct MovieResponse {
-    let movies: [Movie]
-    let page: Int
-    let totalPages: Int
-    let totalMovies: Int
+    public let movies: [Movie]
+    public let page: Int
+    public let totalPages: Int
+    public let totalMovies: Int
 }
 
 extension MovieResponse: Decodable {
@@ -24,14 +24,12 @@ extension MovieResponse: Decodable {
     }
 }
 
-public struct Movie {
+public struct Movie: Decodable {
     public let id: Int
     public let title: String
     public let posterPath: String?
-    public let rating: Int
-}
-
-extension Movie: Decodable {
+    public let rating: Double
+    
     enum CodingKeys: String, CodingKey {
         case id
         case title

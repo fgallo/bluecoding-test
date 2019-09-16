@@ -15,6 +15,7 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let disposeBag = DisposeBag()
+    private let collectionViewPadding: CGFloat = 16.0
     var viewModel: MoviesViewModel!
     
     override func viewDidLoad() {
@@ -24,7 +25,10 @@ class MoviesViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        collectionView.delegate = self
         collectionView.refreshControl = UIRefreshControl()
+        collectionView.register(UINib(nibName: String(describing: MovieCollectionViewCell.self), bundle: nil),
+                                forCellWithReuseIdentifier: MovieCollectionViewCell.cellIdentifier)
     }
     
     private func bindViewModel() {
@@ -46,6 +50,28 @@ class MoviesViewController: UIViewController {
         output.fetching
             .drive(collectionView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
+    }
+    
+}
+
+
+extension MoviesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: collectionViewPadding,
+                            left: collectionViewPadding,
+                            bottom: collectionViewPadding,
+                            right: collectionViewPadding)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.frame.size.width - (collectionViewPadding *  3)
+        let width = collectionViewWidth / 2
+        let height = width * 1.85
+        
+        return CGSize(width: width, height: height)
     }
     
 }

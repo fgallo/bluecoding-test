@@ -11,9 +11,15 @@ import Domain
 import RxSwift
 
 public class MoviesDataRepository: Domain.MoviesUseCase {
+
+    private let network: MoviesNetwork
     
-    public func movies() -> Observable<[Movie]> {
-        return Observable.empty()
+    init(network: MoviesNetwork) {
+        self.network = network
+    }
+    
+    public func movies(releaseYear: Int) -> Observable<MovieResponse> {
+        return network.fetchMovies(releaseYear: releaseYear)
     }
     
 }

@@ -34,11 +34,15 @@ class MoviesViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
-        let movies = input.trigger.flatMapLatest {
-            return self.useCase.movies()
+        let currentYear = NSCalendar.current.component(.year, from: Date())
+        let movies = input.trigger.flatMapLatest { _ in
+            return self.useCase.movies(releaseYear: currentYear)
                 .trackActivity(activityIndicator)
                 .trackError(errorTracker)
                 .asDriverOnErrorJustComplete()
+                .map({ response -> [Movie] in
+                    return response.movies
+                })
                 .map { $0.map { MovieCellViewModel(movie: $0) } }
         }
         

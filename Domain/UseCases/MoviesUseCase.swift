@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 public protocol MoviesUseCase {
-    func movies() -> Observable<[Movie]>
+    func movies(releaseYear: Int) -> Observable<MovieResponse>
 }
