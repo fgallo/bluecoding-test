@@ -12,6 +12,7 @@ target 'BlueCoding' do
   use_frameworks!
   rx_cocoa
   rx_swift
+  pod 'AlamofireImage'
 
   target 'BlueCodingTests' do
     inherit! :search_paths

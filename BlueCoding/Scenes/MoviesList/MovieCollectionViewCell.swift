@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -30,6 +31,13 @@ class MovieCollectionViewCell: UICollectionViewCell {
     func bind(_ viewModel: MovieCellViewModel) {
         self.titleLabel.text = viewModel.title
         self.ratingLabel.text = viewModel.rating
+        
+        if let url = viewModel.posterURL {
+            self.movieImageView.af_setImage(
+                withURL: url,
+                imageTransition: .crossDissolve(0.2)
+            )
+        }
     }
 
 }

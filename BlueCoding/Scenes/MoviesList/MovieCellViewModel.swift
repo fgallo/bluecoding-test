@@ -17,6 +17,6 @@ struct MovieCellViewModel {
     init(movie: Movie) {
         self.title = movie.title
         self.rating = "\(movie.rating) / 10.0"
-        self.posterURL = URL(string: movie.posterPath ?? "")
+        self.posterURL = URL(string: "https://image.tmdb.org/t/p/original" + (movie.posterPath ?? ""))
     }
 }

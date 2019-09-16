@@ -28,6 +28,7 @@ class DefaultMoviesRouter: MoviesRouter {
     
     func toMovies() {
         let moviesViewController = storyboard.instantiateViewController(withIdentifier: "MoviesViewController") as! MoviesViewController
+        moviesViewController.title = "Movies"
         moviesViewController.viewModel = MoviesViewModel(useCase: services.makeMoviesUseCase(), router: self)
         navigationController.pushViewController(moviesViewController, animated: true)
     }
